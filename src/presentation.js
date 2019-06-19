@@ -1,15 +1,16 @@
 // Import React
 import React from "react";
 import ReactLogo from "./react-logo.png";
+import Context from "./prop-drilling-v-context.png";
+import AnimatedComponent from "./components/AnimatedComponent";
 
 // Import Spectacle Core tags
 import {
+  Anim,
   BlockQuote,
   Cite,
   Deck,
   Heading,
-  ListItem,
-  List,
   Quote,
   Slide,
   Text,
@@ -54,27 +55,41 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={1} textColor="primary" caps>
-            Prop Drilling
-          </Heading>
-          <Heading size={1} textColor="secondary">
-            Prop Drilling
-          </Heading>
-          <Heading size={2} textColor="secondary">
-            Prop Drilling
-          </Heading>
-          <Heading size={3} textColor="secondary">
-            Prop Drilling
-          </Heading>
-          <Heading size={4} textColor="secondary">
-            Prop Drilling
-          </Heading>
-          <Heading size={5} textColor="secondary">
-            Prop Drilling
-          </Heading>
-          <Heading size={6} textColor="secondary">
-            Prop Drilling
-          </Heading>
+          <AnimatedComponent>
+            <Heading size={1} textColor="primary" caps>
+              Prop Drilling
+            </Heading>
+          </AnimatedComponent>
+          <AnimatedComponent>
+            <Heading size={1} textColor="secondary">
+              Prop Drilling
+            </Heading>
+          </AnimatedComponent>
+          <AnimatedComponent>
+            <Heading size={2} textColor="secondary">
+              Prop Drilling
+            </Heading>
+          </AnimatedComponent>
+          <AnimatedComponent>
+            <Heading size={3} textColor="secondary">
+              Prop Drilling
+            </Heading>
+          </AnimatedComponent>
+          <AnimatedComponent>
+            <Heading size={4} textColor="secondary">
+              Prop Drilling
+            </Heading>
+          </AnimatedComponent>
+          <AnimatedComponent>
+            <Heading size={5} textColor="secondary">
+              Prop Drilling
+            </Heading>
+          </AnimatedComponent>
+          <AnimatedComponent>
+            <Heading size={6} textColor="secondary">
+              Prop Drilling
+            </Heading>
+          </AnimatedComponent>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={6} margin="0px 0 1em " textColor="primary" caps>
@@ -92,6 +107,12 @@ export default class Presentation extends React.Component {
               theme="light"
             />
           </div>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={4} margin="0px 0 1em " textColor="secondary" caps>
+            Context API
+          </Heading>
+          <Image src={Context} alt="react logo" />
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
