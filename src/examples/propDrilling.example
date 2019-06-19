@@ -1,0 +1,32 @@
+
+// Todo.jsx
+const AddTodo = () => {
+  const [todo, setTodo] = useState("");
+  const [todos, setTodos] = useState([]);
+
+  const handleChange = e => setTodos(e.target.value);
+  const handleClick = () => {
+    setTodos([...todos, todo]);
+    setTodo("");
+  };
+
+  return (
+    <div>
+      <input value={todo} onchange={handleChange} />
+      <button onClick={handleClick}>ADD TODO</button>
+      <TodoList todos={todos} />
+    </div>
+  );
+};
+
+
+//TodoList.jsx
+const TodoList = ({ todos }) => {
+  return (
+    <ul>
+      {todos.map(todo => (
+        <li key={todo}>{todo}</li>
+      ))}
+    </ul>
+  );
+};
