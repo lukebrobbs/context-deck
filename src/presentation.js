@@ -6,16 +6,17 @@ import AnimatedComponent from "./components/AnimatedComponent";
 
 // Import Spectacle Core tags
 import {
-  Anim,
-  BlockQuote,
-  Cite,
+  List,
+  ListItem,
   Deck,
   Heading,
-  Quote,
   Slide,
   Text,
   Image,
-  CodePane
+  CodePane,
+  BlockQuote,
+  Cite,
+  Quote
 } from "spectacle";
 
 // Import theme
@@ -101,7 +102,7 @@ export default class Presentation extends React.Component {
             }}
           >
             <CodePane
-              textSize={15}
+              textSize={12}
               lang="jsx"
               source={require("./examples/propDrilling.example")}
               theme="light"
@@ -115,9 +116,45 @@ export default class Presentation extends React.Component {
           <Image src={Context} alt="react logo" />
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={4} margin="0px 0 1em" textColor="tertiary" caps>
+            Provider
+          </Heading>
+          <List start={2}>
+            <AnimatedComponent>
+              <ListItem padding="0.5em">
+                allows consuming components to subscribe to context changes
+              </ListItem>
+            </AnimatedComponent>
+            <AnimatedComponent>
+              <ListItem padding="0.5em">
+                Accepts a value prop to be passed to consuming components
+              </ListItem>
+            </AnimatedComponent>
+            <AnimatedComponent>
+              <ListItem padding="0.5em">
+                All consumers that are descendants of a Provider will re-render
+                whenever the Provider’s value prop changes.
+              </ListItem>
+            </AnimatedComponent>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={4} margin="0px 0 1em" textColor="tertiary" caps>
+            Consumer
+          </Heading>
+          <List start={2}>
+            <AnimatedComponent>
+              <ListItem padding="0.5em">
+                Subscribes to the provider object, and is able to access the
+                values set as a value prop on the Provider.
+              </ListItem>
+            </AnimatedComponent>
+          </List>
+        </Slide>
+        <Slide bgColor="secondary" textColor="primary">
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Quote>Live demo</Quote>
+            <Cite>Todo list with context and useReducer</Cite>
           </BlockQuote>
         </Slide>
       </Deck>

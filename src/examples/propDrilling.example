@@ -4,7 +4,7 @@ const AddTodo = () => {
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
 
-  const handleChange = e => setTodos(e.target.value);
+  const handleChange = e => setTodo(e.target.value);
   const handleClick = () => {
     setTodos([...todos, todo]);
     setTodo("");
@@ -12,7 +12,7 @@ const AddTodo = () => {
 
   return (
     <div>
-      <input value={todo} onchange={handleChange} />
+      <input value={todo} onChange={handleChange} />
       <button onClick={handleClick}>ADD TODO</button>
       <TodoList todos={todos} />
     </div>
